@@ -1,0 +1,16 @@
+--- old/demo.c	2012-05-30 16:33:11.983695756 +1000
++++ new/demo.c	2012-05-30 16:33:17.710709403 +1000
+@@ -1,8 +1,11 @@
+ #include <stdio.h>
+ 
+-int main(void){
++int main(int argc, char *argv[]){
+ 
+-    puts("Hello world!");
++    if (argc > 1)
++        printf("Hello %s", argv[1]);
++    else 
++        puts("Hello world!");
+     return 0;
+ 
+ }
